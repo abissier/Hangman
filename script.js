@@ -8,7 +8,8 @@ var wrongUserGuess = []; //puts wrong guess in this array
 var round = 0;
 var wins = 0;
 
-var generateWord = function () {
+function generateWord () {
+
     if (round <= 2) {
         currentWord = wordArray[round]; 
 
@@ -24,13 +25,33 @@ var generateWord = function () {
         $(".user-guess-section").empty();
         $(".end-message").append("<h2>" + "Game over! You won a total of " + wins + " time(s)!" + "</h2>")
     }
-};
+
+ }
+// var generateWord = function () {
+//     if (round <= 2) {
+//         currentWord = wordArray[round]; 
+
+//         for (var i = 0; i < currentWord.length; i++) {
+//             displayWord.push("_");
+//         }
+//          $(".display-word").append(displayWord);
+//     } else {
+//         var endDisplay = $("<div>");
+//         endDisplay.addClass("end-message animated bounce");
+//         $(".current-word-section").empty().append(endDisplay);
+
+//         $(".user-guess-section").empty();
+//         $(".end-message").append("<h2>" + "Game over! You won a total of " + wins + " time(s)!" + "</h2>")
+//     }
+// };
 
 //button that calls function to generate word
-$(".btn").on("click", function () {
-    $(".btn").addClass("clicked");
-    generateWord();
-})
+$(".btn").on("click", generateWord);
+
+// function () {
+//     $(".btn").addClass("clicked");
+//     generateWord();
+// })
 
 //user enters letter
 $("body").keydown(function (event) {
