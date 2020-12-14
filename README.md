@@ -13,7 +13,7 @@ SO THAT I can compare my score with my friends
 ### Deployed link
 
 ```
-link:
+link: https://abissier.github.io/Hangman-Game/
 ```
 
 ### Screencapture 
